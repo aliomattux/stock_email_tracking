@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+
+        <record id="view_email_picking_form" model="ir.ui.view">
+            <field name="name">Email Picking Form</field>
+            <field name="model">stock.picking</field>
+	    <field name="inherit_id" ref="stock_package.view_picking_package_form" />
+            <field name="arch" type="xml">
+		<field name="state" position="before" >
+		    <button name="send_one_tracking_email" type="object" string="Email Delivery Order" />
+		</field>
+	    </field>
+	</record>
+
+    </data>
+</openerp>
